@@ -48,14 +48,6 @@ cp $VENV_DIR/bin/pshtt $BUILD_DIR/bin
 wget -O $BUILD_DIR/public-suffix-list.txt \
      https://publicsuffix.org/list/public_suffix_list.dat
 
-# Lambda workaround for SQLite.
-# RUN wget https://github.com/Miserlou/lambda-packages/raw/master/lambda_packages/sqlite3/python3.6-sqlite3-3.6.0.tar.gz | tar xz --directory=$BUILD_DIR
-
-# Lambda workaround for cryptography (Lambda doesn't have openssl 1.0.2)
-# RUN rm -rf $BUILD_DIR/cryptography \
-#     && rm -rf $BUILD_DIR/cryptography-1.9-py3.6.egg-info
-# RUN wget https://github.com/Miserlou/lambda-packages/raw/master/lambda_packages/cryptography/python3.6-cryptography-1.9.tar.gz | tar xz --directory=$BUILD_DIR
-
 ###
 # Zip it all up
 ###
