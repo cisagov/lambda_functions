@@ -8,11 +8,11 @@ via 18F's [`domain-scan`](https://github.com/18F/domain-scan).
 
 Building the `pshtt` environment zip file and deploying it to AWS
 Lambda using `domain-scan`:
-# `cd ~/dhs-ncats/lambda_functions`
-# `docker-compose up build_pshtt`
-# `cp pshtt.zip ~/18F/domain-scan/lambda/envs/`
-# `cd ~/18F/domain-scan`
-# `./lambda/deploy pshtt --create`
+1. `cd ~/dhs-ncats/lambda_functions`
+2. `docker-compose up build_pshtt`
+3. `cp pshtt.zip ~/18F/domain-scan/lambda/envs/`
+4. `cd ~/18F/domain-scan`
+5. `./lambda/deploy pshtt --create`
 
 ## License ##
 
