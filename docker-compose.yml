@@ -6,3 +6,8 @@ services:
     image: 'dhub.ncats.dhs.gov:5001/build_pshtt'
     volumes:
       - .:/output
+  build_sslyze:
+    build: ./sslyze
+    image: 'dhub.ncats.dhs.gov:5001/build_sslyze'
+    volumes:
+      - .:/output
