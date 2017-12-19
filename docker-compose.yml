@@ -11,3 +11,8 @@ services:
     image: 'dhub.ncats.dhs.gov:5001/build_sslyze'
     volumes:
       - .:/output
+  build_trustymail:
+    build: ./trustymail
+    image: 'dhub.ncats.dhs.gov:5001/build_trustymail'
+    volumes:
+      - .:/output
