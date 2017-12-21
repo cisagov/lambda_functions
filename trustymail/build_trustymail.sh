@@ -20,7 +20,10 @@ pip install --upgrade \
 ###
 # Install domain-scan
 ###
-git clone https://github.com/18F/domain-scan
+git clone https://github.com/jsf9k/domain-scan
+cd domain-scan
+git checkout feature/lambda_support_for_trustymail
+cd ..
 pip install -r domain-scan/requirements.txt
 
 ###
