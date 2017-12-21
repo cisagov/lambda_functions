@@ -22,7 +22,7 @@ pip install --upgrade \
 ###
 git clone https://github.com/jsf9k/domain-scan
 cd domain-scan
-git checkout feature/lambda_support_for_trustymail
+git checkout feature/sslyze_should_support_ports_other_than_443
 cd ..
 pip install -r domain-scan/requirements.txt
 

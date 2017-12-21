@@ -20,7 +20,10 @@ pip install --upgrade \
 ###
 # Install domain-scan
 ###
-git clone https://github.com/18F/domain-scan
+git clone https://github.com/jsf9k/domain-scan
+cd domain-scan
+git checkout feature/sslyze_should_support_ports_other_than_443
+cd ..
 pip install -r domain-scan/requirements.txt
 
 ###
