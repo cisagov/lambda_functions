@@ -7,14 +7,6 @@ VENV_DIR=/venv
 python -m venv $VENV_DIR
 source $VENV_DIR/bin/activate
 
-##
-# Force pip to install sslyze from GitHub, so it depends on
-# cryptography 2.x and not 1.9.
-##
-source $VENV_DIR/bin/activate
-pip install --upgrade \
-    git+https://github.com/nabla-c0d3/sslyze.git@master
-
 ###
 # Install domain-scan
 ###

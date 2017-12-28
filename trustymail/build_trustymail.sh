@@ -8,13 +8,10 @@ python -m venv $VENV_DIR
 source $VENV_DIR/bin/activate
 
 ##
-# Force pip to install sslyze from GitHub, so it depends on
-# cryptography 2.x and not 1.9. Also force pip to install the latest
-# trustymail from GitHub.
+# Force pip to install the latest trustymail from GitHub
 ##
 source $VENV_DIR/bin/activate
 pip install --upgrade \
-    git+https://github.com/nabla-c0d3/sslyze.git@master \
     git+https://github.com/dhs-ncats/trustymail.git@develop
 
 ###
