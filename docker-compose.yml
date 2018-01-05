@@ -3,16 +3,16 @@ version: '3.2'
 services:
   build_pshtt:
     build: ./pshtt
-    image: 'dhub.ncats.dhs.gov:5001/build_pshtt'
+    image: 'dhsncats/build_pshtt'
     volumes:
       - .:/output
   build_sslyze:
     build: ./sslyze
-    image: 'dhub.ncats.dhs.gov:5001/build_sslyze'
+    image: 'dhsncats/build_sslyze'
     volumes:
       - .:/output
   build_trustymail:
     build: ./trustymail
-    image: 'dhub.ncats.dhs.gov:5001/build_trustymail'
+    image: 'dhsncats/build_trustymail'
     volumes:
       - .:/output
