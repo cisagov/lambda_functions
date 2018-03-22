@@ -8,10 +8,15 @@ python -m venv $VENV_DIR
 source $VENV_DIR/bin/activate
 
 ###
+# Update pip and setuptools
+###
+pip install --upgrade pip setuptools
+
+###
 # Install domain-scan
 ###
 git clone https://github.com/18F/domain-scan
-pip install -r domain-scan/requirements.txt
+pip install --upgrade -r domain-scan/requirements.txt
 
 ###
 # Leave the Python virtual environment
