@@ -12,17 +12,20 @@ source $VENV_DIR/bin/activate
 ###
 pip install --upgrade pip setuptools
 
-##
-# Force pip to install the latest pshtt from GitHub
-##
-pip install --upgrade \
-    git+https://github.com/dhs-ncats/pshtt.git@develop
-
 ###
 # Install domain-scan
 ###
 git clone https://github.com/18F/domain-scan
 pip install --upgrade -r domain-scan/requirements.txt
+
+##
+# Force pip to install the latest pshtt from GitHub.
+#
+# The order matters here, since domain-scan/requirements.txt installs
+# pshtt from pip.  This must come after that.
+##
+pip install --upgrade \
+    git+https://github.com/dhs-ncats/pshtt.git@develop
 
 ###
 # Leave the Python virtual environment
