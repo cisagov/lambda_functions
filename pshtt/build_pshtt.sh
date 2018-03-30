@@ -37,6 +37,7 @@ deactivate
 ###
 BUILD_DIR=/build
 mkdir -p $BUILD_DIR/bin
+mkdir -p $BUILD_DIR/cache
 
 ###
 # Copy all packages, including any hidden dotfiles.  Also copy the
@@ -49,7 +50,7 @@ cp $VENV_DIR/bin/pshtt $BUILD_DIR/bin
 ###
 # Copy in a snapshot of the public suffix list in text form
 ###
-wget -O $BUILD_DIR/public-suffix-list.txt \
+wget -O $BUILD_DIR/cache/public-suffix-list.txt \
      https://publicsuffix.org/list/public_suffix_list.dat
 
 ###
