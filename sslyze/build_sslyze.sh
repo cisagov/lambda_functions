@@ -38,12 +38,6 @@ cp -rT $VENV_DIR/lib64/python3.6/site-packages/ $BUILD_DIR
 cp $VENV_DIR/bin/sslyze $BUILD_DIR/bin
 
 ###
-# Copy in a snapshot of the public suffix list in text form
-###
-wget -O $BUILD_DIR/public-suffix-list.txt \
-     https://publicsuffix.org/list/public_suffix_list.dat
-
-###
 # Zip it all up
 ###
 OUTPUT_DIR=/output
