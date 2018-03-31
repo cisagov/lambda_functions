@@ -13,6 +13,11 @@ source $VENV_DIR/bin/activate
 pip install --upgrade pip setuptools
 
 ###
+# Install sslyze
+###
+pip install --upgrade sslyze==1.3.4
+
+###
 # Install domain-scan
 ###
 git clone https://github.com/18F/domain-scan
