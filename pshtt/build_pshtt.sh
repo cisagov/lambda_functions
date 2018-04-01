@@ -16,7 +16,7 @@ pip install --upgrade pip setuptools
 # Install domain-scan
 ###
 git clone https://github.com/18F/domain-scan
-pip install --upgrade -r domain-scan/requirements.txt
+pip install --upgrade -r domain-scan/lambda/requirements-lambda.txt
 
 ##
 # Force pip to install the latest pshtt from GitHub.
