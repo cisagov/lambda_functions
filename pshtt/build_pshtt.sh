@@ -12,20 +12,17 @@ source $VENV_DIR/bin/activate
 ###
 pip install --upgrade pip setuptools
 
-###
-# Install domain-scan
-###
-git clone https://github.com/18F/domain-scan
-pip install --upgrade -r domain-scan/lambda/requirements-lambda.txt
-
 ##
 # Force pip to install the latest pshtt from GitHub.
-#
-# The order matters here, since domain-scan/requirements.txt installs
-# pshtt from pip.  This must come after that.
 ##
 pip install --upgrade \
     git+https://github.com/dhs-ncats/pshtt.git@develop
+
+###
+# Install domain-scan
+###
+git clone --branch improvement/psl_now_stored_in_same_cache_location_in_lambda_and_local https://github.com/18F/domain-scan
+pip install --upgrade -r domain-scan/lambda/requirements-lambda.txt
 
 ###
 # Leave the Python virtual environment

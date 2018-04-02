@@ -21,7 +21,7 @@ pip install --upgrade \
 ###
 # Install domain-scan
 ###
-git clone https://github.com/18F/domain-scan
+git clone --branch improvement/psl_now_stored_in_same_cache_location_in_lambda_and_local https://github.com/18F/domain-scan
 pip install --upgrade -r domain-scan/lambda/requirements-lambda.txt
 
 ###
