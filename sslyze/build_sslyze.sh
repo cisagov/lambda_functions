@@ -15,12 +15,12 @@ pip install --upgrade pip setuptools
 ###
 # Install sslyze
 ###
-pip install --upgrade "sslyze>=1.3.4,<1.4.0"
+pip install --upgrade "sslyze>=1.4.1"
 
 ###
 # Install domain-scan
 ###
-git clone --branch improvement/psl_now_stored_in_same_cache_location_in_lambda_and_local https://github.com/18F/domain-scan
+git clone https://github.com/18F/domain-scan
 pip install --upgrade -r domain-scan/lambda/requirements-lambda.txt
 
 ###
