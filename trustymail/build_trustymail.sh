@@ -13,10 +13,9 @@ source $VENV_DIR/bin/activate
 pip install --upgrade pip setuptools
 
 ##
-# Force pip to install the latest trustymail from GitHub
+# Install trustymail
 ##
-pip install --upgrade \
-    git+https://github.com/dhs-ncats/trustymail.git@develop
+pip install --upgrade trustymail==0.5.5
 
 ###
 # Install domain-scan

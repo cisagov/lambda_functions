@@ -1,0 +1,9 @@
+sudo: required
+
+services:
+  - docker
+
+script:
+  - docker-compose config --quiet
+  - docker-compose build
+  - docker-compose up

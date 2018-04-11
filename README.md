@@ -1,5 +1,7 @@
 # lambda_functions :cloud: :penguin: #
 
+[![Build Status](https://travis-ci.org/dhs-ncats/lambda_functions.svg?branch=master)](https://travis-ci.org/dhs-ncats/lambda_functions)
+
 `lambda_functions` is a tool for building environment zip files for
 scan types to be run in [AWS Lambda](https://aws.amazon.com/lambda/)
 via 18F's [`domain-scan`](https://github.com/18F/domain-scan).
