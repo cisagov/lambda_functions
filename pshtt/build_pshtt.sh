@@ -13,10 +13,9 @@ source $VENV_DIR/bin/activate
 pip install --upgrade pip setuptools
 
 ##
-# Force pip to install the latest pshtt from GitHub.
+# Install pshtt
 ##
-pip install --upgrade \
-    git+https://github.com/dhs-ncats/pshtt.git@develop
+pip install --upgrade pshtt==0.4.1
 
 ###
 # Install domain-scan

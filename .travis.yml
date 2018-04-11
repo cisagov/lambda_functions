@@ -4,6 +4,6 @@ services:
   - docker
 
 script:
-  - travis_scripts/validate_docker_compose_file.sh
-  - travis_scripts/build_docker_images.sh
-  - travis_scripts/build_lambda_zips.sh
+  - docker-compose config --quiet
+  - docker-compose build
+  - docker-compose up
