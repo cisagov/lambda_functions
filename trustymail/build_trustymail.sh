@@ -65,3 +65,14 @@ then
 fi
 cd $BUILD_DIR
 zip -rq9 $OUTPUT_DIR/trustymail.zip .
+
+# Pull in the Lambda handler file, then zip it all up again
+wget -q -O $BUILD_DIR/lambda_handler.py \
+     https://raw.githubusercontent.com/18F/domain-scan/master/lambda/lambda_handler.py
+
+if [ -e $OUTPUT_DIR/trustymail_complete.zip ]
+then
+    rm $OUTPUT_DIR/trustymail_complete.zip
+fi
+cd $BUILD_DIR
+zip -rq9 $OUTPUT_DIR/trustymail_complete.zip .

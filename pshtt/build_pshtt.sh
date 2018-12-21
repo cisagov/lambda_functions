@@ -65,3 +65,15 @@ then
 fi
 cd $BUILD_DIR
 zip -rq9 $OUTPUT_DIR/pshtt.zip .
+
+# Pull in the Lambda handler file, then zip it all up again under a
+# different name
+wget -q -O $BUILD_DIR/lambda_handler.py \
+     https://raw.githubusercontent.com/18F/domain-scan/master/lambda/lambda_handler.py
+
+if [ -e $OUTPUT_DIR/pshtt_complete.zip ]
+then
+    rm $OUTPUT_DIR/pshtt_complete.zip
+fi
+cd $BUILD_DIR
+zip -rq9 $OUTPUT_DIR/pshtt_complete.zip .
