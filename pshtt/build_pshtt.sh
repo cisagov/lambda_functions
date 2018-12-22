@@ -66,10 +66,13 @@ fi
 cd $BUILD_DIR
 zip -rq9 $OUTPUT_DIR/pshtt.zip .
 
-# Pull in the Lambda handler file, then zip it all up again under a
-# different name
-wget -q -O $BUILD_DIR/lambda_handler.py \
-     https://raw.githubusercontent.com/18F/domain-scan/master/lambda/lambda_handler.py
+# Copy in the Lambda handler file, the utils directory, and the
+# scanner file itself, then zip it all up again
+cp -r /var/task/domain-scan/lambda/lambda_handler.py \
+   /var/task/domain-scan/utils \
+   $BUILD_DIR
+mkdir $BUILD_DIR/scanners
+cp /var/task/domain-scan/scanners/pshtt.py $BUILD_DIR/scanners
 
 if [ -e $OUTPUT_DIR/pshtt_complete.zip ]
 then
