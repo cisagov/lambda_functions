@@ -1,6 +1,6 @@
 # lambda_functions :cloud: :penguin: #
 
-[![Build Status](https://travis-ci.org/dhs-ncats/lambda_functions.svg?branch=master)](https://travis-ci.org/dhs-ncats/lambda_functions)
+[![Build Status](https://travis-ci.org/cisagov/lambda_functions.svg?branch=master)](https://travis-ci.org/cisagov/lambda_functions)
 
 `lambda_functions` is a tool for building environment zip files for
 scan types to be run in [AWS Lambda](https://aws.amazon.com/lambda/)
@@ -12,7 +12,7 @@ via 18F's [`domain-scan`](https://github.com/18F/domain-scan).
 
 Building the environment zip files for all scanners and deploying them
 to AWS Lambda using `domain-scan`:
-1. `cd ~/dhs-ncats/lambda_functions`
+1. `cd ~/cisagov/lambda_functions`
 2. `docker-compose build`
 3. `docker-compose up`
 4. `cp *.zip ~/18F/domain-scan/lambda/envs/`
@@ -25,7 +25,7 @@ to AWS Lambda using `domain-scan`:
 
 Building the `pshtt` environment zip file and deploying it to AWS
 Lambda using `domain-scan`:
-1. `cd ~/dhs-ncats/lambda_functions`
+1. `cd ~/cisagov/lambda_functions`
 2. `docker-compose build build_pshtt`
 3. `docker-compose up build_pshtt`
 4. `cp pshtt.zip ~/18F/domain-scan/lambda/envs/`

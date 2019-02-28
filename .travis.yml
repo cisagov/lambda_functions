@@ -1,9 +1,15 @@
-sudo: required
+language: minimal
+distribution: xenial
+sudo: true
 
 services:
   - docker
 
+before_install:
+  - sudo apt-get install -y shellcheck
+
 script:
+  - shellcheck bump_version.sh tag.sh pshtt/build_pshtt.sh sslyze/build_sslyze.sh trustymail/build_trustymail.sh
   - docker-compose config --quiet
   - docker-compose build
   - docker-compose up
