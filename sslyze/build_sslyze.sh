@@ -34,8 +34,14 @@ pip install --upgrade -r domain-scan/lambda/requirements-lambda.txt
 
 ###
 # Leave the Python virtual environment
+#
+# Note that we have to turn off nounset before running deactivate,
+# since otherwise we get an error that states "/venv/bin/activate:
+# line 31: $1: unbound variable".
 ###
+set +o nounset
 deactivate
+set -o nounset
 
 ###
 # Set up the build directory
