@@ -1,6 +1,6 @@
 # lambda_functions :cloud: :penguin: #
 
-[![Build Status](https://travis-ci.org/cisagov/lambda_functions.svg?branch=master)](https://travis-ci.org/cisagov/lambda_functions)
+[![Build Status](https://travis-ci.com/cisagov/lambda_functions.svg?branch=develop)](https://travis-ci.com/cisagov/lambda_functions)
 
 `lambda_functions` is a tool for building environment zip files for
 scan types to be run in [AWS Lambda](https://aws.amazon.com/lambda/)
