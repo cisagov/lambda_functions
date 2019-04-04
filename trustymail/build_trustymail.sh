@@ -24,7 +24,7 @@ pip install --upgrade pip setuptools
 ##
 # Install trustymail
 ##
-pip install --upgrade trustymail==0.7.1
+pip install --upgrade trustymail==0.7.2
 
 ###
 # Install domain-scan
