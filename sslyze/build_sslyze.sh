@@ -9,12 +9,18 @@ set -o pipefail
 ###
 VENV_DIR=/venv
 python -m venv $VENV_DIR
-# Here shellcheck complains because it can't follow the dynamic path.
-# The path doesn't even exist until runtime, so we must disable that
-# check.
+# Note that we have to turn off nounset before running activate, since
+# otherwise we can get an error that states "/venv/bin/activate: line
+# 6: _OLD_VIRTUAL_PATH: unbound variable".  See
+# cisagov/lambda_functions#29 for more details.
+set +o nounset
+# Note also that shellcheck complains because it can't follow the
+# dynamic path.  The path doesn't even exist until runtime, so we must
+# disable that check.
 #
 # shellcheck disable=1090
 source $VENV_DIR/bin/activate
+set -o nounset
 
 ###
 # Update pip and setuptools
