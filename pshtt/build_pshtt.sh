@@ -23,9 +23,9 @@ source $VENV_DIR/bin/activate
 set -o nounset
 
 ###
-# Update pip and setuptools
+# Update pip, setuptools, and wheel
 ###
-pip install --upgrade pip setuptools
+pip install --upgrade pip setuptools wheel
 
 ##
 # Install pshtt
