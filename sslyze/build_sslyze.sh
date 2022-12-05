@@ -35,7 +35,7 @@ pip install --upgrade sslyze==2.1.3
 ###
 # Install domain-scan
 ###
-mkdir domain-scan
+[ -d domain-scan ] || mkdir domain-scan
 wget -q -O - https://api.github.com/repos/18F/domain-scan/tarball | tar xz --strip-components=1 -C domain-scan
 pip install --upgrade -r domain-scan/lambda/requirements-lambda.txt
 
