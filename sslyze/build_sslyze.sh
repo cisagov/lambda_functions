@@ -60,8 +60,8 @@ mkdir -p $BUILD_DIR/bin
 # Copy all packages, including any hidden dotfiles.  Also copy the
 # sslyze executable.
 ###
-cp -rT $VENV_DIR/lib/python3.6/site-packages/ $BUILD_DIR
-cp -rT $VENV_DIR/lib64/python3.6/site-packages/ $BUILD_DIR
+cp -rT $VENV_DIR/lib/python3.7/site-packages/ $BUILD_DIR
+cp -rT $VENV_DIR/lib64/python3.7/site-packages/ $BUILD_DIR
 cp $VENV_DIR/bin/sslyze $BUILD_DIR/bin
 
 ###
