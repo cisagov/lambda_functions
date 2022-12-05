@@ -30,7 +30,7 @@ pip install --upgrade pip setuptools wheel
 ##
 # Install pshtt
 ##
-pip install --upgrade pshtt==0.6.8
+pip install --upgrade pshtt==0.6.9
 
 ###
 # Install domain-scan
