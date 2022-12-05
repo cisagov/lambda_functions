@@ -4,8 +4,8 @@
 
 `lambda_functions` is a tool for building environment zip files for
 scan types to be run in [AWS Lambda](https://aws.amazon.com/lambda/)
-via [the `cisagov` fork](https://github.com/18F/domain-scan) of 18F's
-[`domain-scan`](https://github.com/18F/domain-scan).
+via [the `cisagov` fork](https://github.com/cisagov/domain-scan) of
+18F's [`domain-scan`](https://github.com/18F/domain-scan).
 
 ## Examples ##
 
