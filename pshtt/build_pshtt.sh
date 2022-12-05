@@ -23,19 +23,19 @@ source $VENV_DIR/bin/activate
 set -o nounset
 
 ###
-# Update pip and setuptools
+# Update pip, setuptools, and wheel
 ###
-pip install --upgrade pip setuptools
+pip install --upgrade pip setuptools wheel
 
 ##
 # Install pshtt
 ##
-pip install --upgrade pshtt==0.6.6
+pip install --upgrade pshtt==0.6.9
 
 ###
 # Install domain-scan
 ###
-mkdir domain-scan
+[ -d domain-scan ] || mkdir domain-scan
 wget -q -O - https://api.github.com/repos/18F/domain-scan/tarball | tar xz --strip-components=1 -C domain-scan
 pip install --upgrade -r domain-scan/lambda/requirements-lambda.txt
 
@@ -61,8 +61,8 @@ mkdir -p $BUILD_DIR/cache
 # Copy all packages, including any hidden dotfiles.  Also copy the
 # pshtt executable.
 ###
-cp -rT $VENV_DIR/lib/python3.6/site-packages/ $BUILD_DIR
-cp -rT $VENV_DIR/lib64/python3.6/site-packages/ $BUILD_DIR
+cp -rT $VENV_DIR/lib/python3.7/site-packages/ $BUILD_DIR
+cp -rT $VENV_DIR/lib64/python3.7/site-packages/ $BUILD_DIR
 cp $VENV_DIR/bin/pshtt $BUILD_DIR/bin
 
 ###

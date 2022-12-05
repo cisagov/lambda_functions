@@ -4,7 +4,8 @@
 
 `lambda_functions` is a tool for building environment zip files for
 scan types to be run in [AWS Lambda](https://aws.amazon.com/lambda/)
-via 18F's [`domain-scan`](https://github.com/18F/domain-scan).
+via [the `cisagov` fork](https://github.com/cisagov/domain-scan) of
+18F's [`domain-scan`](https://github.com/18F/domain-scan).
 
 ## Examples ##
 
@@ -15,8 +16,8 @@ to AWS Lambda using `domain-scan`:
 1. `cd ~/cisagov/lambda_functions`
 2. `docker-compose build`
 3. `docker-compose up`
-4. `cp *.zip ~/18F/domain-scan/lambda/envs/`
-5. `cd ~/18F/domain-scan`
+4. `cp *.zip ~/cisagov/domain-scan/lambda/envs/`
+5. `cd ~/cisagov/domain-scan`
 6. `./lambda/deploy pshtt --create`
 7. `./lambda/deploy sslyze --create`
 8. `./lambda/deploy trustymail --create`
@@ -28,8 +29,8 @@ Lambda using `domain-scan`:
 1. `cd ~/cisagov/lambda_functions`
 2. `docker-compose build build_pshtt`
 3. `docker-compose up build_pshtt`
-4. `cp pshtt.zip ~/18F/domain-scan/lambda/envs/`
-5. `cd ~/18F/domain-scan`
+4. `cp pshtt.zip ~/cisagov/domain-scan/lambda/envs/`
+5. `cd ~/cisagov/domain-scan`
 6. `./lambda/deploy pshtt --create`
 
 ## Note ##
