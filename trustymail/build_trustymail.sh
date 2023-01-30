@@ -30,13 +30,13 @@ pip install --upgrade pip setuptools wheel
 ##
 # Install trustymail
 ##
-pip install --upgrade trustymail==0.7.5
+pip install --upgrade trustymail==0.8.1
 
 ###
 # Install domain-scan
 ###
 [ -d domain-scan ] || mkdir domain-scan
-wget -q -O - https://api.github.com/repos/18F/domain-scan/tarball | tar xz --strip-components=1 -C domain-scan
+wget -q -O - https://api.github.com/repos/cisagov/domain-scan/tarball | tar xz --strip-components=1 -C domain-scan
 pip install --upgrade -r domain-scan/lambda/requirements-lambda.txt
 
 ###

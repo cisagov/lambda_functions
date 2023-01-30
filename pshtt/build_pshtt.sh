@@ -30,13 +30,13 @@ pip install --upgrade pip setuptools wheel
 ##
 # Install pshtt
 ##
-pip install --upgrade pshtt==0.6.9
+pip install --upgrade pshtt==0.6.10
 
 ###
 # Install domain-scan
 ###
 [ -d domain-scan ] || mkdir domain-scan
-wget -q -O - https://api.github.com/repos/18F/domain-scan/tarball | tar xz --strip-components=1 -C domain-scan
+wget -q -O - https://api.github.com/repos/cisagov/domain-scan/tarball | tar xz --strip-components=1 -C domain-scan
 pip install --upgrade -r domain-scan/lambda/requirements-lambda.txt
 
 ###
