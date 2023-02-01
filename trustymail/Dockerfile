@@ -1,8 +1,11 @@
 FROM public.ecr.aws/lambda/python:3.7
 MAINTAINER Shane Frasier <jeremy.frasier@trio.dhs.gov>
 
-# We need wget to download the public suffix list
-RUN yum -q -y install wget
+# We need to install some basic packages so that the Docker container
+# can run the build_trustymail.sh script.
+RUN yum -q -y install \
+    wget \
+    zip
 
 COPY build_trustymail.sh .
 
