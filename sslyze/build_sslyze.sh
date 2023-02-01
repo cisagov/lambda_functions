@@ -30,7 +30,7 @@ pip install --upgrade pip setuptools wheel
 ###
 # Install sslyze
 ###
-pip install --upgrade sslyze==2.1.3
+pip install --upgrade sslyze==2.1.4
 
 ###
 # Install domain-scan
