@@ -8,7 +8,7 @@ set -o pipefail
 # Set up the Python virtual environment
 ###
 VENV_DIR=/venv
-python -m venv $VENV_DIR
+python3 -m venv $VENV_DIR
 # Note that we have to turn off nounset before running activate, since
 # otherwise we can get an error that states "/venv/bin/activate: line
 # 6: _OLD_VIRTUAL_PATH: unbound variable".  See
@@ -25,19 +25,19 @@ set -o nounset
 ###
 # Update pip, setuptools, and wheel
 ###
-pip install --upgrade pip setuptools wheel
+pip3 install --upgrade pip setuptools wheel
 
 ###
 # Install sslyze
 ###
-pip install --upgrade sslyze==2.1.4
+pip3 install --upgrade sslyze==2.1.4
 
 ###
 # Install domain-scan
 ###
 [ -d domain-scan ] || mkdir domain-scan
 wget -q -O - https://api.github.com/repos/cisagov/domain-scan/tarball | tar xz --strip-components=1 -C domain-scan
-pip install --upgrade -r domain-scan/lambda/requirements-lambda.txt
+pip3 install --upgrade -r domain-scan/lambda/requirements-lambda.txt
 
 ###
 # Leave the Python virtual environment
