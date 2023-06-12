@@ -30,7 +30,8 @@ pip install --upgrade pip setuptools wheel
 ##
 # Install pshtt
 ##
-pip install --upgrade pshtt==0.6.10
+# pip install --upgrade pshtt==0.6.10
+pip install --upgrade https://github.com/freedomofpress/pshtt/archive/sslyze3-support.tar.gz
 
 ###
 # Install domain-scan
