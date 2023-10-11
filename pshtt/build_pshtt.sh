@@ -37,7 +37,7 @@ pip3 install --upgrade https://github.com/freedomofpress/pshtt/archive/sslyze3-s
 # Install domain-scan
 ###
 [ -d domain-scan ] || mkdir domain-scan
-wget -q -O - https://api.github.com/repos/cisagov/domain-scan/tarball | tar xz --strip-components=1 -C domain-scan
+wget -q -O - https://api.github.com/repos/cisagov/domain-scan/tarball/testing/mcdonnnj | tar xz --strip-components=1 -C domain-scan
 pip3 install --upgrade -r domain-scan/lambda/requirements-lambda.txt
 
 ###

@@ -36,7 +36,7 @@ pip3 install --upgrade sslyze==2.1.4
 # Install domain-scan
 ###
 [ -d domain-scan ] || mkdir domain-scan
-wget -q -O - https://api.github.com/repos/cisagov/domain-scan/tarball | tar xz --strip-components=1 -C domain-scan
+wget -q -O - https://api.github.com/repos/cisagov/domain-scan/tarball/testing/mcdonnnj | tar xz --strip-components=1 -C domain-scan
 pip3 install --upgrade -r domain-scan/lambda/requirements-lambda.txt
 
 ###
