@@ -15,7 +15,7 @@ LABEL org.opencontainers.image.vendor="Cybersecurity and Infrastructure Security
 
 # We need to install some basic packages so that the Docker container
 # can run the build_sslyze.sh script.
-RUN yum -q -y install \
+RUN yum --assumeyes --quiet install \
     wget \
     zip
 
