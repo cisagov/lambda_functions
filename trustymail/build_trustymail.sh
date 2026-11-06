@@ -30,7 +30,7 @@ pip3 install --upgrade pip setuptools wheel
 ##
 # Install trustymail
 ##
-pip3 install --upgrade trustymail==0.8.1
+pip3 install --upgrade trustymail==1.2.2
 
 ###
 # Install domain-scan
@@ -61,8 +61,8 @@ mkdir --parents $BUILD_DIR/cache
 # Copy all packages, including any hidden dotfiles.  Also copy the
 # trustymail executable.
 ###
-cp --recursive --no-target-directory $VENV_DIR/lib/python3.7/site-packages/ $BUILD_DIR
-cp --recursive --no-target-directory $VENV_DIR/lib64/python3.7/site-packages/ $BUILD_DIR
+cp --recursive --no-target-directory $VENV_DIR/lib/python3.14/site-packages/ $BUILD_DIR
+cp --recursive --no-target-directory $VENV_DIR/lib64/python3.14/site-packages/ $BUILD_DIR
 cp $VENV_DIR/bin/trustymail $BUILD_DIR/bin
 
 ###
