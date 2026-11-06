@@ -1,4 +1,4 @@
-FROM public.ecr.aws/lambda/python:3.7
+FROM public.ecr.aws/lambda/python:3.14
 
 ###
 # For a list of pre-defined annotation keys and value types see:
@@ -9,7 +9,9 @@ LABEL org.opencontainers.image.vendor="Cybersecurity and Infrastructure Security
 
 # We need to install some basic packages so that the Docker container
 # can run the build_trustymail.sh script.
-RUN yum --assumeyes --quiet install \
+RUN dnf --assumeyes install \
+    gzip \
+    tar \
     wget \
     zip
 

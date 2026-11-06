@@ -30,7 +30,7 @@ pip3 install --upgrade pip setuptools wheel
 ##
 # Install pshtt
 ##
-pip3 install --upgrade pshtt==0.6.10
+pip3 install --upgrade pshtt==0.7.6
 
 ###
 # Install domain-scan
@@ -61,8 +61,8 @@ mkdir --parents $BUILD_DIR/cache
 # Copy all packages, including any hidden dotfiles.  Also copy the
 # pshtt executable.
 ###
-cp --recursive --no-target-directory $VENV_DIR/lib/python3.7/site-packages/ $BUILD_DIR
-cp --recursive --no-target-directory $VENV_DIR/lib64/python3.7/site-packages/ $BUILD_DIR
+cp --recursive --no-target-directory $VENV_DIR/lib/python3.10/site-packages/ $BUILD_DIR
+cp --recursive --no-target-directory $VENV_DIR/lib64/python3.10/site-packages/ $BUILD_DIR
 cp $VENV_DIR/bin/pshtt $BUILD_DIR/bin
 
 ###
